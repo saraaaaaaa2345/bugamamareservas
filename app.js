@@ -10,15 +10,15 @@ function reservar() {
   }
 
   const mensaje =
-    "🍽️ Nueva Reserva - Buga Mama%0A%0A" +
-    "👤 Nombre: " + nombre + "%0A" +
-    "📞 Teléfono: " + telefono + "%0A" +
-    "📅 Fecha: " + fecha + "%0A" +
+    "🍽️ Nueva Reserva - Buga Mama\n\n" +
+    "👤 Nombre: " + nombre + "\n" +
+    "📞 Teléfono: " + telefono + "\n" +
+    "📅 Fecha: " + fecha + "\n" +
     "👥 Personas: " + personas;
 
-  const numeroWhatsApp = "50234837662";
+  const numeroWhatsApp = "34837662";
 
-  const url = "https://wa.me/" + numeroWhatsApp + "?text=" + mensaje;
+  const url = "https://wa.me/" + numeroWhatsApp + "?text=" + encodeURIComponent(mensaje);
 
   window.open(url, "_blank");
 }
